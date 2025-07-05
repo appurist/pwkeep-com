@@ -1,0 +1,198 @@
+---
+import BaseHead from '../components/BaseHead.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import PWKeepLogo from '../components/PWKeepLogo.astro';
+import { SITE_TITLE } from '../consts';
+---
+
+<!doctype html>
+<html lang="en">
+	<head>
+		<BaseHead title={`Install - ${SITE_TITLE}`} description="Install PWKeep password manager on Chrome, Firefox, Edge, Safari, and other browsers. Free and secure password management." />
+	</head>
+	<body>
+		<Header />
+		<main>
+			<section class="install-hero">
+				<div class="hero-logo">
+					<PWKeepLogo size={60} />
+				</div>
+				<h1>Install PWKeep</h1>
+				<p class="install-subtitle">
+					Choose your browser and start securing your passwords in minutes
+				</p>
+			</section>
+
+			<!-- Browser Installation Options -->
+			<section class="browser-install">
+				<div class="browser-grid">
+					<div class="browser-card featured">
+						<div class="browser-icon">🌐</div>
+						<h3>Chrome</h3>
+						<p>Most popular choice</p>
+						<div class="install-steps">
+							<ol>
+								<li>Download the extension files from GitHub</li>
+								<li>Open Chrome and go to <code>chrome://extensions/</code></li>
+								<li>Enable "Developer mode" in the top right</li>
+								<li>Click "Load unpacked" and select the <code>dist</code> folder</li>
+							</ol>
+						</div>
+						<a href="https://github.com/appurist/pwkeep/releases" class="btn btn-primary">Download for Chrome</a>
+					</div>
+
+					<div class="browser-card">
+						<div class="browser-icon">🦊</div>
+						<h3>Firefox</h3>
+						<p>Privacy-focused browser</p>
+						<div class="install-steps">
+							<ol>
+								<li>Download the extension files from GitHub</li>
+								<li>Copy <code>manifest-v2.json</code> to <code>dist/manifest.json</code></li>
+								<li>Open Firefox and go to <code>about:debugging</code></li>
+								<li>Click "This Firefox" → "Load Temporary Add-on"</li>
+								<li>Select the <code>manifest.json</code> file</li>
+							</ol>
+						</div>
+						<a href="https://github.com/appurist/pwkeep/releases" class="btn btn-primary">Download for Firefox</a>
+					</div>
+
+					<div class="browser-card">
+						<div class="browser-icon">🔷</div>
+						<h3>Edge</h3>
+						<p>Microsoft's browser</p>
+						<div class="install-steps">
+							<ol>
+								<li>Download the extension files from GitHub</li>
+								<li>Open Edge and go to <code>edge://extensions/</code></li>
+								<li>Enable "Developer mode" in the left sidebar</li>
+								<li>Click "Load unpacked" and select the <code>dist</code> folder</li>
+							</ol>
+						</div>
+						<a href="https://github.com/appurist/pwkeep/releases" class="btn btn-primary">Download for Edge</a>
+					</div>
+
+					<div class="browser-card">
+						<div class="browser-icon">🧭</div>
+						<h3>Safari</h3>
+						<p>macOS browser</p>
+						<div class="install-steps">
+							<ol>
+								<li>Download the extension files from GitHub</li>
+								<li>Convert using Safari Web Extension Converter</li>
+								<li>Build and install through Xcode</li>
+								<li>Enable in Safari Extensions preferences</li>
+							</ol>
+						</div>
+						<a href="https://github.com/appurist/pwkeep" class="btn btn-secondary">View Instructions</a>
+					</div>
+				</div>
+			</section>
+
+			<!-- Prerequisites -->
+			<section class="prerequisites">
+				<h2>Prerequisites</h2>
+				<div class="prereq-grid">
+					<div class="prereq-card">
+						<h3>🔧 Development Tools</h3>
+						<ul>
+							<li>Node.js 16+ and npm</li>
+							<li>Git (for cloning the repository)</li>
+							<li>Modern web browser</li>
+						</ul>
+					</div>
+					<div class="prereq-card">
+						<h3>📋 Build Steps</h3>
+						<ol>
+							<li>Clone the repository</li>
+							<li>Run <code>npm install</code></li>
+							<li>Run <code>npm run build</code></li>
+							<li>Load the <code>dist</code> folder in your browser</li>
+						</ol>
+					</div>
+				</div>
+			</section>
+
+			<!-- Detailed Instructions -->
+			<section class="detailed-instructions">
+				<h2>Detailed Installation Guide</h2>
+				
+				<div class="instruction-section">
+					<h3>Step 1: Download PWKeep</h3>
+					<p>
+						Get the latest version of PWKeep from our GitHub repository. You can either download 
+						the pre-built release or clone the repository to build it yourself.
+					</p>
+					<div class="code-block">
+						<code>git clone https://github.com/appurist/pwkeep.git<br>
+						cd pwkeep<br>
+						npm install<br>
+						npm run build</code>
+					</div>
+				</div>
+
+				<div class="instruction-section">
+					<h3>Step 2: Load in Browser</h3>
+					<p>
+						Once you have the built extension files, follow the browser-specific instructions above 
+						to load PWKeep as an unpacked extension.
+					</p>
+				</div>
+
+				<div class="instruction-section">
+					<h3>Step 3: Set Up Your Master Password</h3>
+					<p>
+						After installation, click the PWKeep icon in your browser toolbar and create a strong 
+						master password. This password encrypts all your data and cannot be recovered if forgotten.
+					</p>
+				</div>
+
+				<div class="instruction-section">
+					<h3>Step 4: Start Adding Passwords</h3>
+					<p>
+						You can now start adding passwords manually or let PWKeep detect and save them 
+						automatically when you log into websites.
+					</p>
+				</div>
+			</section>
+
+			<!-- Troubleshooting -->
+			<section class="troubleshooting">
+				<h2>Troubleshooting</h2>
+				<div class="faq-grid">
+					<div class="faq-item">
+						<h3>Extension won't load?</h3>
+						<p>Make sure you've enabled Developer mode in your browser's extension settings and that you're selecting the correct <code>dist</code> folder.</p>
+					</div>
+					<div class="faq-item">
+						<h3>Build errors?</h3>
+						<p>Ensure you have Node.js 16+ installed and run <code>npm install</code> before building. Check the console for specific error messages.</p>
+					</div>
+					<div class="faq-item">
+						<h3>Firefox compatibility?</h3>
+						<p>Firefox requires the Manifest V2 version. Make sure to copy <code>manifest-v2.json</code> to <code>dist/manifest.json</code> before loading.</p>
+					</div>
+					<div class="faq-item">
+						<h3>Need help?</h3>
+						<p>Check our <a href="https://github.com/appurist/pwkeep/issues">GitHub issues</a> or create a new issue if you encounter problems.</p>
+					</div>
+				</div>
+			</section>
+
+			<!-- Security Note -->
+			<section class="security-note">
+				<h2>🔒 Security Note</h2>
+				<p>
+					PWKeep requests minimal browser permissions and stores all data locally on your device. 
+					No data is sent to external servers, ensuring your passwords remain completely private.
+				</p>
+				<p>
+					<strong>Remember:</strong> Your master password cannot be recovered if forgotten. 
+					Make sure to choose something memorable but secure.
+				</p>
+			</section>
+		</main>
+		<Footer />
+	</body>
+</html>

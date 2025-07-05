@@ -1,62 +1,107 @@
 ---
-import Layout from '../layouts/BlogPost.astro';
+import BaseHead from '../components/BaseHead.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import { SITE_TITLE } from '../consts';
 ---
 
-<Layout
-	title="About Me"
-	description="Lorem ipsum dolor sit amet"
-	pubDate={new Date('August 08 2021')}
-	heroImage="/blog-placeholder-about.jpg"
->
-	<p>
-		Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-		labore et dolore magna aliqua. Vitae ultricies leo integer malesuada nunc vel risus commodo
-		viverra. Adipiscing enim eu turpis egestas pretium. Euismod elementum nisi quis eleifend quam
-		adipiscing. In hac habitasse platea dictumst vestibulum. Sagittis purus sit amet volutpat. Netus
-		et malesuada fames ac turpis egestas. Eget magna fermentum iaculis eu non diam phasellus
-		vestibulum lorem. Varius sit amet mattis vulputate enim. Habitasse platea dictumst quisque
-		sagittis. Integer quis auctor elit sed vulputate mi. Dictumst quisque sagittis purus sit amet.
-	</p>
+<!doctype html>
+<html lang="en">
+	<head>
+		<BaseHead title={`About - ${SITE_TITLE}`} description="Learn about PWKeep, the secure password manager that keeps your data private and local." />
+	</head>
+	<body>
+		<Header />
+		<main>
+			<section class="about-hero">
+				<h1>About PWKeep</h1>
+				<p class="about-subtitle">
+					A password manager built with privacy and security as the foundation
+				</p>
+			</section>
 
-	<p>
-		Morbi tristique senectus et netus. Id semper risus in hendrerit gravida rutrum quisque non
-		tellus. Habitasse platea dictumst quisque sagittis purus sit amet. Tellus molestie nunc non
-		blandit massa. Cursus vitae congue mauris rhoncus. Accumsan tortor posuere ac ut. Fringilla urna
-		porttitor rhoncus dolor. Elit ullamcorper dignissim cras tincidunt lobortis. In cursus turpis
-		massa tincidunt dui ut ornare lectus. Integer feugiat scelerisque varius morbi enim nunc.
-		Bibendum neque egestas congue quisque egestas diam. Cras ornare arcu dui vivamus arcu felis
-		bibendum. Dignissim suspendisse in est ante in nibh mauris. Sed tempus urna et pharetra pharetra
-		massa massa ultricies mi.
-	</p>
+			<section class="about-content">
+				<div class="about-section">
+					<h2>Our Mission</h2>
+					<p>
+						PWKeep was created with a simple but important mission: provide a secure, privacy-focused
+						password manager that puts users in complete control of their data. In an age where data
+						breaches and privacy violations are commonplace, we believe your passwords should never
+						leave your device.
+					</p>
+				</div>
 
-	<p>
-		Mollis nunc sed id semper risus in. Convallis a cras semper auctor neque. Diam sit amet nisl
-		suscipit. Lacus viverra vitae congue eu consequat ac felis donec. Egestas integer eget aliquet
-		nibh praesent tristique magna sit amet. Eget magna fermentum iaculis eu non diam. In vitae
-		turpis massa sed elementum. Tristique et egestas quis ipsum suspendisse ultrices. Eget lorem
-		dolor sed viverra ipsum. Vel turpis nunc eget lorem dolor sed viverra. Posuere ac ut consequat
-		semper viverra nam. Laoreet suspendisse interdum consectetur libero id faucibus. Diam phasellus
-		vestibulum lorem sed risus ultricies tristique. Rhoncus dolor purus non enim praesent elementum
-		facilisis. Ultrices tincidunt arcu non sodales neque. Tempus egestas sed sed risus pretium quam
-		vulputate. Viverra suspendisse potenti nullam ac tortor vitae purus faucibus ornare. Fringilla
-		urna porttitor rhoncus dolor purus non. Amet dictum sit amet justo donec enim.
-	</p>
+				<div class="about-section">
+					<h2>Why PWKeep?</h2>
+					<p>
+						Unlike other password managers that store your data in the cloud, PWKeep keeps everything
+						local on your device. This approach offers several key advantages:
+					</p>
+					<ul>
+						<li><strong>Complete Privacy:</strong> Your data never leaves your device</li>
+						<li><strong>No Monthly Fees:</strong> Free forever, no subscriptions required</li>
+						<li><strong>Faster Access:</strong> No network delays when accessing your passwords</li>
+						<li><strong>Zero Breach Risk:</strong> Can't be hacked if it's not online</li>
+						<li><strong>Full Control:</strong> You own your data completely</li>
+					</ul>
+				</div>
 
-	<p>
-		Mattis ullamcorper velit sed ullamcorper morbi tincidunt. Tortor posuere ac ut consequat semper
-		viverra. Tellus mauris a diam maecenas sed enim ut sem viverra. Venenatis urna cursus eget nunc
-		scelerisque viverra mauris in. Arcu ac tortor dignissim convallis aenean et tortor at. Curabitur
-		gravida arcu ac tortor dignissim convallis aenean et tortor. Egestas tellus rutrum tellus
-		pellentesque eu. Fusce ut placerat orci nulla pellentesque dignissim enim sit amet. Ut enim
-		blandit volutpat maecenas volutpat blandit aliquam etiam. Id donec ultrices tincidunt arcu. Id
-		cursus metus aliquam eleifend mi.
-	</p>
+				<div class="about-section">
+					<h2>Security First</h2>
+					<p>
+						PWKeep uses industry-standard security practices to protect your data:
+					</p>
+					<ul>
+						<li><strong>AES-256-GCM Encryption:</strong> Military-grade encryption for all sensitive data</li>
+						<li><strong>PBKDF2 Key Derivation:</strong> 100,000 iterations make brute force attacks impossible</li>
+						<li><strong>Secure Random Generation:</strong> Cryptographically secure password generation</li>
+						<li><strong>Zero-Knowledge Architecture:</strong> Even we can't see your passwords</li>
+						<li><strong>Open Source:</strong> Transparent code that security experts can review</li>
+					</ul>
+				</div>
 
-	<p>
-		Tempus quam pellentesque nec nam aliquam sem. Risus at ultrices mi tempus imperdiet. Id porta
-		nibh venenatis cras sed felis eget velit. Ipsum a arcu cursus vitae. Facilisis magna etiam
-		tempor orci eu lobortis elementum. Tincidunt dui ut ornare lectus sit. Quisque non tellus orci
-		ac. Blandit libero volutpat sed cras. Nec tincidunt praesent semper feugiat nibh sed pulvinar
-		proin gravida. Egestas integer eget aliquet nibh praesent tristique magna.
-	</p>
-</Layout>
+				<div class="about-section">
+					<h2>Cross-Platform Support</h2>
+					<p>
+						PWKeep works seamlessly across all major browsers and platforms:
+					</p>
+					<ul>
+						<li>Chrome and Chromium-based browsers</li>
+						<li>Firefox</li>
+						<li>Microsoft Edge</li>
+						<li>Safari (with manual installation)</li>
+						<li>Opera</li>
+					</ul>
+				</div>
+
+				<div class="about-section">
+					<h2>Open Source & Free</h2>
+					<p>
+						PWKeep is completely open source and free to use. We believe security tools should be
+						transparent and accessible to everyone. You can review our code, contribute improvements,
+						or even build your own version.
+					</p>
+					<p>
+						<a href="https://github.com/appurist/pwkeep" target="_blank" rel="noopener">
+							View the source code on GitHub →
+						</a>
+					</p>
+				</div>
+
+				<div class="about-section">
+					<h2>Get Started Today</h2>
+					<p>
+						Ready to take control of your password security? PWKeep is easy to install and use.
+						Get started in just a few minutes and enjoy peace of mind knowing your passwords are
+						secure and private.
+					</p>
+					<div class="cta-buttons">
+						<a href="/install" class="btn btn-primary">Install PWKeep</a>
+						<a href="https://github.com/appurist/pwkeep" class="btn btn-secondary">View on GitHub</a>
+					</div>
+				</div>
+			</section>
+		</main>
+		<Footer />
+	</body>
+</html>

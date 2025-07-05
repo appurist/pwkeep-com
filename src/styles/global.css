@@ -5,8 +5,12 @@
  */
 
 :root {
-  --accent: #2337ff;
-  --accent-dark: #000d8a;
+  --accent: #4CAF50;
+  --accent-dark: #388E3C;
+  --primary: #4CAF50;
+  --primary-dark: #388E3C;
+  --secondary: #2196F3;
+  --secondary-dark: #1976D2;
   --black: 15, 18, 25;
   --gray: 96, 115, 159;
   --gray-light: 229, 233, 240;
@@ -152,4 +156,343 @@ hr {
   clip-path: inset(50%);
   /* added line to stop words getting smushed together (as they go onto separate lines and some screen readers do not understand line feeds as a space */
   white-space: nowrap;
+}
+
+/* PWKeep Marketing Styles */
+.hero {
+  text-align: center;
+  padding: 4rem 0;
+  background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+  color: white;
+  margin: -3em -1em 3em -1em;
+}
+
+.hero-logo {
+  margin-bottom: 2rem;
+}
+
+.hero-title {
+  font-size: 3.5rem;
+  margin-bottom: 1rem;
+  font-weight: 700;
+}
+
+.hero-title .highlight {
+  color: #FFD700;
+}
+
+.hero-subtitle {
+  font-size: 1.25rem;
+  margin-bottom: 2rem;
+  opacity: 0.9;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.hero-buttons {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.btn {
+  display: inline-block;
+  padding: 0.75rem 2rem;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  border: 2px solid transparent;
+}
+
+.btn-primary {
+  background: white;
+  color: var(--primary);
+}
+
+.btn-primary:hover {
+  background: rgba(255, 255, 255, 0.9);
+  transform: translateY(-2px);
+}
+
+.btn-secondary {
+  background: transparent;
+  color: white;
+  border-color: white;
+}
+
+.btn-secondary:hover {
+  background: white;
+  color: var(--primary);
+}
+
+.section-title {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 3rem;
+  color: rgb(var(--black));
+}
+
+.features {
+  padding: 4rem 0;
+}
+
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.feature-card {
+  text-align: center;
+  padding: 2rem;
+  border-radius: 12px;
+  background: white;
+  box-shadow: var(--box-shadow);
+  transition: transform 0.3s ease;
+}
+
+.feature-card:hover {
+  transform: translateY(-5px);
+}
+
+.feature-icon {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.feature-card h3 {
+  color: rgb(var(--black));
+  margin-bottom: 1rem;
+}
+
+.security {
+  padding: 4rem 0;
+  background: rgba(var(--gray-light), 0.3);
+  margin: 0 -1em;
+}
+
+.security-content {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 0 1em;
+}
+
+.security-intro {
+  font-size: 1.25rem;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.security-features {
+  list-style: none;
+  padding: 0;
+}
+
+.security-features li {
+  padding: 1rem 0;
+  border-bottom: 1px solid rgba(var(--gray), 0.2);
+}
+
+.security-features li:last-child {
+  border-bottom: none;
+}
+
+.download {
+  padding: 4rem 0;
+}
+
+.download-subtitle {
+  text-align: center;
+  font-size: 1.25rem;
+  margin-bottom: 3rem;
+  color: rgb(var(--gray-dark));
+}
+
+.browser-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  margin-bottom: 3rem;
+}
+
+.browser-card {
+  text-align: center;
+  padding: 2rem;
+  border-radius: 12px;
+  background: white;
+  box-shadow: var(--box-shadow);
+}
+
+.browser-icon {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.browser-card h3 {
+  margin-bottom: 0.5rem;
+}
+
+.browser-card p {
+  color: rgb(var(--gray));
+  margin-bottom: 1.5rem;
+}
+
+.manual-install {
+  text-align: center;
+  padding: 2rem;
+  background: rgba(var(--gray-light), 0.3);
+  border-radius: 12px;
+}
+
+/* Install Page Styles */
+.install-hero {
+  text-align: center;
+  padding: 3rem 0;
+  background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+  color: white;
+  margin: -3em -1em 3em -1em;
+}
+
+.install-subtitle {
+  font-size: 1.25rem;
+  opacity: 0.9;
+  margin-bottom: 0;
+}
+
+.browser-install {
+  padding: 4rem 0;
+}
+
+.browser-card.featured {
+  border: 3px solid var(--primary);
+  position: relative;
+}
+
+.browser-card.featured::before {
+  content: "Recommended";
+  position: absolute;
+  top: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: var(--primary);
+  color: white;
+  padding: 0.25rem 1rem;
+  border-radius: 12px;
+  font-size: 0.875rem;
+  font-weight: 600;
+}
+
+.install-steps {
+  text-align: left;
+  margin: 1.5rem 0;
+}
+
+.install-steps ol {
+  padding-left: 1.25rem;
+}
+
+.install-steps li {
+  margin-bottom: 0.5rem;
+  line-height: 1.5;
+}
+
+.prerequisites {
+  padding: 4rem 0;
+  background: rgba(var(--gray-light), 0.3);
+  margin: 0 -1em;
+}
+
+.prereq-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.prereq-card {
+  background: white;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: var(--box-shadow);
+}
+
+.detailed-instructions {
+  padding: 4rem 0;
+}
+
+.instruction-section {
+  margin-bottom: 3rem;
+}
+
+.code-block {
+  background: rgb(var(--black));
+  color: white;
+  padding: 1.5rem;
+  border-radius: 8px;
+  margin: 1rem 0;
+  font-family: 'Courier New', monospace;
+  overflow-x: auto;
+}
+
+.troubleshooting {
+  padding: 4rem 0;
+  background: rgba(var(--gray-light), 0.3);
+  margin: 0 -1em;
+}
+
+.faq-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.faq-item {
+  background: white;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: var(--box-shadow);
+}
+
+.security-note {
+  padding: 4rem 0;
+  text-align: center;
+  background: linear-gradient(135deg, #FFF3E0 0%, #FFE0B2 100%);
+  margin: 0 -1em;
+  border-left: 4px solid #FF9800;
+}
+
+@media (max-width: 720px) {
+  .hero-title {
+    font-size: 2.5rem;
+  }
+
+  .hero-buttons {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .features-grid,
+  .browser-grid,
+  .prereq-grid,
+  .faq-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .hero,
+  .install-hero {
+    margin: -1em -1em 2em -1em;
+    padding: 2rem 1rem;
+  }
+
+  .security,
+  .prerequisites,
+  .troubleshooting,
+  .security-note {
+    margin: 0 -1em;
+  }
 }
