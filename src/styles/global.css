@@ -166,6 +166,30 @@ hr {
   background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
   color: white;
   margin: -3em -1em 3em -1em;
+  position: relative;
+  overflow: hidden;
+}
+
+.coming-soon-ribbon {
+  position: absolute;
+  top: 50px;
+  right: -50px;
+  background: repeating-linear-gradient(
+    45deg,
+    #FFD700,
+    #FFD700 10px,
+    #FFA500 10px,
+    #FFA500 20px
+  );
+  color: #000;
+  font-weight: bold;
+  font-size: 0.9rem;
+  padding: 10px 60px;
+  transform: rotate(45deg);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  border: 2px solid #000;
+  letter-spacing: 2px;
+  z-index: 10;
 }
 
 .hero-logo {
