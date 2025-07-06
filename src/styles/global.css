@@ -350,6 +350,8 @@ hr {
   border-radius: 12px;
   background: white;
   box-shadow: var(--box-shadow);
+  position: relative;
+  overflow: hidden;
 }
 
 .browser-icon {
