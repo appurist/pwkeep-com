@@ -32,14 +32,16 @@ import { SITE_TITLE } from '../consts';
 						<h3>Chrome</h3>
 						<p>Most popular choice</p>
 						<div class="install-steps">
+							<p><strong>Recommended:</strong> Install from Chrome Web Store</p>
 							<ol>
-								<li>Download the extension files from GitHub</li>
-								<li>Open Chrome and go to <code>chrome://extensions/</code></li>
-								<li>Enable "Developer mode" in the top right</li>
-								<li>Click "Load unpacked" and select the <code>dist</code> folder</li>
+								<li>Visit the Chrome Web Store</li>
+								<li>Click "Add to Chrome"</li>
+								<li>Confirm installation</li>
+								<li>Set up your master password</li>
 							</ol>
 						</div>
-						<a href="https://github.com/appurist/pwkeep/releases" class="btn btn-primary">Download for Chrome</a>
+						<a href="#" class="btn btn-primary">Install from Chrome Store</a>
+						<a href="/install/chrome" class="btn btn-secondary">Manual Installation</a>
 					</div>
 
 					<div class="browser-card">
@@ -47,15 +49,16 @@ import { SITE_TITLE } from '../consts';
 						<h3>Firefox</h3>
 						<p>Privacy-focused browser</p>
 						<div class="install-steps">
+							<p><strong>Recommended:</strong> Install from Firefox Add-ons</p>
 							<ol>
-								<li>Download the extension files from GitHub</li>
-								<li>Copy <code>manifest-v2.json</code> to <code>dist/manifest.json</code></li>
-								<li>Open Firefox and go to <code>about:debugging</code></li>
-								<li>Click "This Firefox" → "Load Temporary Add-on"</li>
-								<li>Select the <code>manifest.json</code> file</li>
+								<li>Visit Firefox Add-ons store</li>
+								<li>Click "Add to Firefox"</li>
+								<li>Confirm installation</li>
+								<li>Set up your master password</li>
 							</ol>
 						</div>
-						<a href="https://github.com/appurist/pwkeep/releases" class="btn btn-primary">Download for Firefox</a>
+						<a href="#" class="btn btn-primary">Install from Firefox Store</a>
+						<a href="/install/firefox" class="btn btn-secondary">Manual Installation</a>
 					</div>
 
 					<div class="browser-card">
@@ -63,14 +66,16 @@ import { SITE_TITLE } from '../consts';
 						<h3>Edge</h3>
 						<p>Microsoft's browser</p>
 						<div class="install-steps">
+							<p><strong>Recommended:</strong> Install from Edge Add-ons</p>
 							<ol>
-								<li>Download the extension files from GitHub</li>
-								<li>Open Edge and go to <code>edge://extensions/</code></li>
-								<li>Enable "Developer mode" in the left sidebar</li>
-								<li>Click "Load unpacked" and select the <code>dist</code> folder</li>
+								<li>Visit Microsoft Edge Add-ons store</li>
+								<li>Click "Get"</li>
+								<li>Confirm installation</li>
+								<li>Set up your master password</li>
 							</ol>
 						</div>
-						<a href="https://github.com/appurist/pwkeep/releases" class="btn btn-primary">Download for Edge</a>
+						<a href="#" class="btn btn-primary">Install from Edge Store</a>
+						<a href="/install/edge" class="btn btn-secondary">Manual Installation</a>
 					</div>
 
 					<div class="browser-card">
@@ -78,82 +83,75 @@ import { SITE_TITLE } from '../consts';
 						<h3>Safari</h3>
 						<p>macOS browser</p>
 						<div class="install-steps">
+							<p><strong>Download:</strong> Pre-built Safari extension</p>
 							<ol>
-								<li>Download the extension files from GitHub</li>
-								<li>Convert using Safari Web Extension Converter</li>
-								<li>Build and install through Xcode</li>
-								<li>Enable in Safari Extensions preferences</li>
+								<li>Download PWKeep for Safari</li>
+								<li>Double-click to install</li>
+								<li>Enable in Safari Extensions</li>
+								<li>Set up your master password</li>
 							</ol>
 						</div>
-						<a href="https://github.com/appurist/pwkeep" class="btn btn-secondary">View Instructions</a>
+						<a href="#" class="btn btn-primary">Download for Safari</a>
 					</div>
 				</div>
 			</section>
 
-			<!-- Prerequisites -->
-			<section class="prerequisites">
-				<h2>Prerequisites</h2>
-				<div class="prereq-grid">
-					<div class="prereq-card">
-						<h3>🔧 Development Tools</h3>
-						<ul>
-							<li>Node.js 16+ and npm</li>
-							<li>Git (for cloning the repository)</li>
-							<li>Modern web browser</li>
-						</ul>
+			<!-- Getting Started -->
+			<section class="getting-started">
+				<h2>Getting Started</h2>
+				<div class="steps-grid">
+					<div class="step-card">
+						<div class="step-number">1</div>
+						<h3>Install PWKeep</h3>
+						<p>Choose your browser above and install PWKeep from the official store or download the pre-built extension.</p>
 					</div>
-					<div class="prereq-card">
-						<h3>📋 Build Steps</h3>
-						<ol>
-							<li>Clone the repository</li>
-							<li>Run <code>npm install</code></li>
-							<li>Run <code>npm run build</code></li>
-							<li>Load the <code>dist</code> folder in your browser</li>
-						</ol>
+					<div class="step-card">
+						<div class="step-number">2</div>
+						<h3>Create Master Password</h3>
+						<p>Set up a strong master password that will encrypt all your data. This password cannot be recovered if forgotten.</p>
+					</div>
+					<div class="step-card">
+						<div class="step-number">3</div>
+						<h3>Start Saving Passwords</h3>
+						<p>PWKeep will automatically detect login forms and offer to save your passwords securely.</p>
+					</div>
+					<div class="step-card">
+						<div class="step-number">4</div>
+						<h3>Upgrade to Premium</h3>
+						<p>Want sync across devices? Upgrade to PWKeep Premium for secure cloud sync and additional features.</p>
 					</div>
 				</div>
 			</section>
 
-			<!-- Detailed Instructions -->
-			<section class="detailed-instructions">
-				<h2>Detailed Installation Guide</h2>
-				
-				<div class="instruction-section">
-					<h3>Step 1: Download PWKeep</h3>
+			<!-- Alternative Installation -->
+			<section class="alternative-install">
+				<h2>Alternative Installation Methods</h2>
+
+				<div class="alt-method">
+					<h3>📦 Direct Download</h3>
 					<p>
-						Get the latest version of PWKeep from our GitHub repository. You can either download 
-						the pre-built release or clone the repository to build it yourself.
+						Download pre-built extension files directly from our website. Perfect for users who
+						prefer not to use browser stores or need offline installation.
 					</p>
-					<div class="code-block">
-						<code>git clone https://github.com/appurist/pwkeep.git<br>
-						cd pwkeep<br>
-						npm install<br>
-						npm run build</code>
-					</div>
+					<a href="#" class="btn btn-secondary">Download Extension Files</a>
 				</div>
 
-				<div class="instruction-section">
-					<h3>Step 2: Load in Browser</h3>
+				<div class="alt-method">
+					<h3>🏢 Enterprise Installation</h3>
 					<p>
-						Once you have the built extension files, follow the browser-specific instructions above 
-						to load PWKeep as an unpacked extension.
+						IT administrators can deploy PWKeep across their organization using group policies
+						or enterprise management tools.
 					</p>
+					<a href="#" class="btn btn-secondary">Enterprise Guide</a>
 				</div>
 
-				<div class="instruction-section">
-					<h3>Step 3: Set Up Your Master Password</h3>
+				<div class="alt-method">
+					<h3>🔧 Manual Installation</h3>
 					<p>
-						After installation, click the PWKeep icon in your browser toolbar and create a strong 
-						master password. This password encrypts all your data and cannot be recovered if forgotten.
+						For advanced users who want to install PWKeep manually or customize the installation.
+						Includes step-by-step instructions for each browser.
 					</p>
-				</div>
-
-				<div class="instruction-section">
-					<h3>Step 4: Start Adding Passwords</h3>
-					<p>
-						You can now start adding passwords manually or let PWKeep detect and save them 
-						automatically when you log into websites.
-					</p>
+					<a href="#" class="btn btn-secondary">Manual Install Guide</a>
 				</div>
 			</section>
 
@@ -162,34 +160,34 @@ import { SITE_TITLE } from '../consts';
 				<h2>Troubleshooting</h2>
 				<div class="faq-grid">
 					<div class="faq-item">
-						<h3>Extension won't load?</h3>
-						<p>Make sure you've enabled Developer mode in your browser's extension settings and that you're selecting the correct <code>dist</code> folder.</p>
+						<h3>Installation failed?</h3>
+						<p>Try refreshing the browser store page and installing again. If the problem persists, try the manual installation method.</p>
 					</div>
 					<div class="faq-item">
-						<h3>Build errors?</h3>
-						<p>Ensure you have Node.js 16+ installed and run <code>npm install</code> before building. Check the console for specific error messages.</p>
+						<h3>Extension not appearing?</h3>
+						<p>Check your browser's extension management page to ensure PWKeep is enabled. Look for the PWKeep icon in your browser toolbar.</p>
 					</div>
 					<div class="faq-item">
-						<h3>Firefox compatibility?</h3>
-						<p>Firefox requires the Manifest V2 version. Make sure to copy <code>manifest-v2.json</code> to <code>dist/manifest.json</code> before loading.</p>
+						<h3>Can't access passwords?</h3>
+						<p>Make sure you're entering the correct master password. If you've forgotten it, you'll need to reset PWKeep (this will delete all stored data).</p>
 					</div>
 					<div class="faq-item">
 						<h3>Need help?</h3>
-						<p>Check our <a href="https://github.com/appurist/pwkeep/issues">GitHub issues</a> or create a new issue if you encounter problems.</p>
+						<p>Contact our support team or check our help documentation for detailed troubleshooting guides.</p>
 					</div>
 				</div>
 			</section>
 
 			<!-- Security Note -->
 			<section class="security-note">
-				<h2>🔒 Security Note</h2>
+				<h2>🔒 Security & Privacy</h2>
 				<p>
-					PWKeep requests minimal browser permissions and stores all data locally on your device. 
-					No data is sent to external servers, ensuring your passwords remain completely private.
+					PWKeep requests minimal browser permissions and stores all data locally on your device by default.
+					Premium sync uses end-to-end encryption, ensuring your passwords remain completely private even in the cloud.
 				</p>
 				<p>
-					<strong>Remember:</strong> Your master password cannot be recovered if forgotten. 
-					Make sure to choose something memorable but secure.
+					<strong>Important:</strong> Your master password cannot be recovered if forgotten.
+					Make sure to choose something memorable but secure. Consider using PWKeep Premium's backup features for additional protection.
 				</p>
 			</section>
 		</main>
