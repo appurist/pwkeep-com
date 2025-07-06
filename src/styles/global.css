@@ -6,6 +6,7 @@
 
 :root {
   --accent: #4CAF50;
+  --accent-rgb: 76, 175, 80;
   --accent-dark: #388E3C;
   --primary: #4CAF50;
   --primary-dark: #388E3C;
@@ -168,7 +169,7 @@ hr {
 }
 
 .hero-logo {
-  margin-bottom: 2rem;
+  margin-bottom: 1rem;
 }
 
 .hero-title {
@@ -208,12 +209,12 @@ hr {
 }
 
 .btn-primary {
-  background: white;
-  color: var(--primary);
+  background: var(--primary);
+  color: white;
 }
 
 .btn-primary:hover {
-  background: rgba(255, 255, 255, 0.9);
+  background: var(--primary-dark);
   transform: translateY(-2px);
 }
 
@@ -314,7 +315,7 @@ hr {
 
 .browser-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-template-columns: repeat(3, 1fr);
   gap: 2rem;
   margin-bottom: 3rem;
 }
@@ -466,6 +467,201 @@ hr {
   border-left: 4px solid #FF9800;
 }
 
+/* Pricing Section */
+.pricing {
+  padding: 4rem 0;
+  background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+  margin: 0 -1em;
+}
+
+.pricing-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.pricing-card {
+  background: white;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: var(--box-shadow);
+  text-align: center;
+  position: relative;
+  border: 2px solid transparent;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.pricing-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+}
+
+.pricing-card.featured {
+  border-color: var(--accent);
+  transform: scale(1.05);
+}
+
+.pricing-card.featured:hover {
+  transform: scale(1.05) translateY(-5px);
+}
+
+.popular-badge {
+  position: absolute;
+  top: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: var(--accent);
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  font-size: 0.875rem;
+  font-weight: 600;
+}
+
+.pricing-card h3 {
+  margin-bottom: 1rem;
+  color: rgb(var(--black));
+}
+
+.price {
+  font-size: 3rem;
+  font-weight: 700;
+  color: var(--accent);
+  margin-bottom: 1.5rem;
+}
+
+.price .period {
+  font-size: 1rem;
+  color: rgb(var(--gray));
+  font-weight: 400;
+}
+
+.price-options {
+  margin-bottom: 1.5rem;
+}
+
+.price-options .price {
+  margin-bottom: 0;
+}
+
+.price-alt {
+  font-size: 1.2rem;
+  color: rgb(var(--gray-dark));
+  font-weight: 500;
+  margin: 0;
+  line-height: 1;
+}
+
+.price-alt .period {
+  font-size: 0.9rem;
+  color: rgb(var(--gray));
+  font-weight: 400;
+}
+
+.features-list {
+  list-style: none;
+  padding: 0;
+  margin: 2rem 0;
+  text-align: left;
+}
+
+.features-list li {
+  padding: 0.5rem 0;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.features-list li:last-child {
+  border-bottom: none;
+}
+
+.pricing-note {
+  text-align: center;
+  margin-top: 2rem;
+  color: rgb(var(--gray));
+  font-style: italic;
+}
+
+.premium-sync {
+  text-align: center;
+  padding: 2rem;
+  background: linear-gradient(135deg, #e3f2fd 0%, #bbdefb 100%);
+  border-radius: 12px;
+  margin-top: 2rem;
+}
+
+.premium-sync h3 {
+  color: #1976d2;
+  margin-bottom: 1rem;
+}
+
+/* Getting Started Section */
+.getting-started {
+  padding: 4rem 0;
+  background: white;
+}
+
+.steps-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.step-card {
+  text-align: center;
+  padding: 2rem;
+  border-radius: 12px;
+  background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+  position: relative;
+}
+
+.step-number {
+  width: 50px;
+  height: 50px;
+  background: var(--accent);
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin: 0 auto 1rem auto;
+}
+
+.step-card h3 {
+  margin-bottom: 1rem;
+  color: rgb(var(--black));
+}
+
+/* Alternative Installation Section */
+.alternative-install {
+  padding: 4rem 0;
+  background: linear-gradient(135deg, #fff3e0 0%, #ffe0b2 100%);
+  margin: 0 -1em;
+}
+
+.alt-method {
+  background: white;
+  padding: 2rem;
+  border-radius: 12px;
+  margin-bottom: 2rem;
+  box-shadow: var(--box-shadow);
+}
+
+.alt-method:last-child {
+  margin-bottom: 0;
+}
+
+.alt-method h3 {
+  color: rgb(var(--black));
+  margin-bottom: 1rem;
+}
+
 @media (max-width: 720px) {
   .hero-title {
     font-size: 2.5rem;
@@ -479,7 +675,9 @@ hr {
   .features-grid,
   .browser-grid,
   .prereq-grid,
-  .faq-grid {
+  .faq-grid,
+  .pricing-grid,
+  .steps-grid {
     grid-template-columns: 1fr;
   }
 
@@ -492,7 +690,17 @@ hr {
   .security,
   .prerequisites,
   .troubleshooting,
-  .security-note {
+  .security-note,
+  .pricing,
+  .alternative-install {
     margin: 0 -1em;
+  }
+
+  .pricing-card.featured {
+    transform: none;
+  }
+
+  .pricing-card.featured:hover {
+    transform: translateY(-5px);
   }
 }

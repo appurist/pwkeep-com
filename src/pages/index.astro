@@ -18,14 +18,16 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 			<section class="hero">
 				<div class="hero-content">
 					<div class="hero-logo">
-						<PWKeepLogo size={80} />
+						<PWKeepLogo size={160} />
 					</div>
 					<h1 class="hero-title">
-						Your Passwords, <span class="highlight">Secure & Private</span>
+						Your Passwords<br>
+						<span class="highlight">Secure & Private</span><br>
+						No Nonsense
 					</h1>
 					<p class="hero-subtitle">
-						PWKeep is a secure, privacy-focused password manager that keeps all your data local.
-						No cloud sync, no tracking, just pure security.
+						PWKeep is a secure, privacy-focused password manager. Free forever with optional
+						premium sync to keep your passwords secure across your devices.
 					</p>
 					<div class="hero-buttons">
 						<a href="#download" class="btn btn-primary">Download Free</a>
@@ -45,8 +47,8 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 					</div>
 					<div class="feature-card">
 						<div class="feature-icon">🏠</div>
-						<h3>100% Local Storage</h3>
-						<p>Your data never leaves your device. No cloud sync, no servers, complete privacy.</p>
+						<h3>Local-First Security</h3>
+						<p>Your data stays secure on your device by default. Optional premium sync available for multi-device access.</p>
 					</div>
 					<div class="feature-card">
 						<div class="feature-icon">🎲</div>
@@ -83,8 +85,8 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 						<li><strong>AES-256-GCM Encryption:</strong> The same encryption used by governments and banks</li>
 						<li><strong>PBKDF2 Key Derivation:</strong> 100,000 iterations make brute force attacks impossible</li>
 						<li><strong>Zero-Knowledge Architecture:</strong> Even we can't see your passwords</li>
-						<li><strong>Open Source:</strong> Transparent code that security experts can review</li>
-						<li><strong>No Network Requests:</strong> Your data never leaves your device</li>
+						<li><strong>End-to-End Encryption:</strong> Premium sync uses client-side encryption for complete privacy</li>
+						<li><strong>Local-First Design:</strong> Works offline, syncs when you need it</li>
 					</ul>
 				</div>
 			</section>
@@ -113,14 +115,55 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 						<a href="https://github.com/appurist/pwkeep" class="btn btn-primary">Get Extension</a>
 					</div>
 				</div>
-				<div class="manual-install">
-					<h3>Manual Installation</h3>
+				<div id="premium-sync" class="premium-sync">
+					<h3>Premium Sync</h3>
 					<p>
-						For advanced users, you can
-						<a href="https://github.com/appurist/pwkeep">download the source code</a>
-						and install manually following our installation guide.
+						Want to access your passwords on all your devices? Upgrade to PWKeep Premium
+						for secure, encrypted sync across all your browsers and devices.
 					</p>
+					<a href="#premium" class="btn btn-secondary">Learn About Premium</a>
 				</div>
+			</section>
+
+			<!-- Pricing Section -->
+			<section id="premium" class="pricing">
+				<h2 class="section-title">Simple, Fair Pricing</h2>
+				<div class="pricing-grid">
+					<div class="pricing-card">
+						<h3>PWKeep<br>Free</h3>
+						<div class="price">$0<span class="period">/forever</span></div>
+						<ul class="features-list">
+							<li>✓ Unlimited passwords</li>
+							<li>✓ Military-grade encryption</li>
+							<li>✓ Password generator</li>
+							<li>✓ Auto-fill & detection</li>
+							<li>✓ Local storage</li>
+							<li>✓ Import/export support</li>
+							<li>✓ All browsers supported</li>
+						</ul>
+						<a href="#download" class="btn btn-primary">Download Free</a>
+					</div>
+					<div class="pricing-card featured">
+						<div class="popular-badge">Coming Soon</div>
+						<h3>PWKeep<br>Premium</h3>
+						<div class="price-options">
+							<div class="price">$1.49<span class="period">/month</span></div>
+							<div class="price-alt">or $11.99<span class="period">/year</span></div>
+						</div>
+						<ul class="features-list">
+							<li>✓ Everything in Free</li>
+							<li>✓ Secure cloud sync</li>
+							<li>✓ Multi-device access</li>
+							<li>✓ End-to-end encryption</li>
+							<li>✓ Automatic backups</li>
+							<li>✓ Priority support</li>
+						</ul>
+						<a href="#download" class="btn btn-primary">Get Premium</a>
+					</div>
+				</div>
+				<p class="pricing-note">
+					Paid plans include a 30-day money-back guarantee. Cancel anytime.
+				</p>
 			</section>
 		</main>
 		<Footer />
